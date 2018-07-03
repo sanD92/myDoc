@@ -2,3 +2,7 @@
 **************JS*************
 https://www.geeksforgeeks.org/javascript-tutorial/#form
 https://www.geeksforgeeks.org/understanding-basic-javascript-codes/
+
+
+**************Angular 2*************
+https://angular-university.io/course/getting-started-with-angular2
