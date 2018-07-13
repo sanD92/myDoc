@@ -2,6 +2,7 @@
 **************JS*************
 https://www.geeksforgeeks.org/javascript-tutorial/#form
 https://www.geeksforgeeks.org/understanding-basic-javascript-codes/
+http://jstherightway.org/#getting-started
 
 
 **************Angular 2*************
@@ -9,3 +10,5 @@ https://angular-university.io/course/getting-started-with-angular2
 
 ************Selenium*************
 https://github.com/p00j4/elemental-selenium-tips
+*********
+
