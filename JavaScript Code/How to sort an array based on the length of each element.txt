@@ -1,0 +1,21 @@
+arr.sort(function(a, b){
+  // ASC  -> a.length - b.length
+  // DESC -> b.length - a.length
+  return b.length - a.length;
+});
+
+************************ES5 solution**********************************
+
+var array = ["ab", "abcdefgh", "abcd"];
+array.sort(function(a, b){return b.length - a.length});
+console.log(JSON.stringify(array, null, '\t'));
+
+**********************************************************
+
+let array = ["ab", "abcdefgh", "abcd"];
+array.sort((a, b) => b.length - a.length);
+console.log(JSON.stringify(array, null, '\t'));
+
+**********************************************************
+**********************************************************
+**********************************************************

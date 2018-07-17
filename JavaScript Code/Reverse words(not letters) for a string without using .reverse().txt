@@ -1,0 +1,23 @@
+
+
+function reverseMessage(string) {
+    return string.split(" ").reverse().join(" ");
+}
+var string = "reversed are string your in words the now"
+console.log(reverseMessage(string));
+
+output: now the words in your string are reversed
+
+*******************************************************************************
+
+   function reverseMessage(string) {
+     var array = string.split(" ");
+     console.log(array);
+     var result="";
+     for (var i = array.length-1; i >=0; i--) {
+         result+=array[i]+" ";
+     }
+    return result;
+ };
+var string = "reversed are string your in words the now"
+console.log(reverseMessage(string));

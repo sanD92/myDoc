@@ -1,0 +1,41 @@
+
+Palindrome check in Javascript
+
+function checkPalindrom(str) {
+    return str === str.split('').reverse().join('');
+}
+
+console.log(checkPalindrom("mom"));
+
+************************************
+
+function isPalindrome(letters) {
+
+    var characters  = letters.split('');
+        firstLetter = characters.shift();
+        console.log("first letter",firstLetter);
+        lastLetter  = characters.pop();
+        console.log("Last letter",lastLetter);
+
+    if (firstLetter !== lastLetter) {
+        return false;
+    }
+console.log(characters.length);
+    if (characters.length < 2) {
+        return true;
+    }
+
+    return isPalindrome(characters.join(''));
+
+}
+console.log(isPalindrome("rassar") )
+
+
+Output:true
+
+*****************************************************
+
+p=(s)=>s==[...s].reverse().join``
+//true
+console.log(p('racecar'));
+

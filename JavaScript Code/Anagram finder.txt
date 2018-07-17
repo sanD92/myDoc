@@ -1,0 +1,36 @@
+
+Anagrams finder in javascript
+****************************************************************
+
+var input = "monk, konm, bbc, cbb, dell, ledl";
+var words = input.split(", ");
+console.log("words array br split",words);
+for ( var i = 0; i < words.length; i++) {
+
+    var word = words[i];
+    console.log("word",word)
+    var alphabetical = word.split("").sort().join("");
+    console.log(alphabetical);
+    
+    for (var j = 0; j < words.length; j++) {
+
+        if (i === j) {
+            continue;
+        }
+
+        var other = words[j];
+        console.log(other,"other");
+        if(alphabetical === other.split("").sort().join("")){
+            console.log(word + " - " + other + " (" + i + ", " + j + ")");
+        }
+    }
+}
+
+Output:
+
+monk - konm (0, 1)
+konm - monk (1, 0)
+bbc - cbb (2, 3)
+cbb - bbc (3, 2)
+dell - ledl (4, 5)
+ledl - dell (5, 4)

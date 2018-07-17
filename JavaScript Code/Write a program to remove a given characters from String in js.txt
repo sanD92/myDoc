@@ -1,0 +1,14 @@
+Write a program to remove a given characters from String in js
+
+var mystring = "crt/r2002_2";
+mystring = mystring.replace('/r','/');
+//mystring = mystring.replace(/\/r/g, '/');
+console.log(mystring);
+
+Output: 
+crt/2002_2
+
+******************Using APlit and JOIN**********************************
+var mystring = "crt/r2002_2";
+mystring = mystring.split('/r').join('/')
+console.log(mystring);

@@ -1,0 +1,50 @@
+
+Here the hash is a Map object and it will store each character that is available in the string as key. 
+Initial value of any key in the map is undefined. If the character is repeated we mark it as false if no repeat we will mark it as true .
+Once we have this data structure it is very easy to find out which characters are repeated. Now it takes O(n) to solve the problem.
+
+const str = "afewreociwddwjej";
+function findRepeat(str) {
+  const arr = str.split('');
+  const hash = new Map();
+  const result = [];
+  // If repeat the value is false, if no repeat the value is true
+  for (let i = 0; i < arr.length; i++) {
+      console.log("hast get value",hash.get(arr[i]));
+    if (hash.get(arr[i]) === undefined) {
+      hash.set(arr[i], true);
+      console.log("hast set value",hash.set(arr[i], true));
+    } else {
+      const value = hash.get(arr[i]);
+      if (value) {
+        hash.set(arr[i], !value);
+      }
+    }
+  }
+  hash.forEach((v, k) => {
+    if (!v)
+      result.push(k);
+  });
+  return result;
+}
+console.log(...findRepeat(str));
+//... make string from array of character
+output:
+e w d j
+**********************javascript regular expression to find out duplicate character***************************
+
+const str = "afewreociwddwjej";
+
+function howManyRepeated(str){
+  const result = [];
+  const strArr = str.toLowerCase().split("").sort().join("").match(/(.)\1+/g);
+  console.log( str.toLowerCase().split("").sort().join("").match(/(.)\1+/g));
+  
+  if (strArr != null) {
+    strArr.forEach((elem) => {
+      result.push(elem[0]);
+    });
+  }
+  return result;
+}
+console.log(...howManyRepeated(str));

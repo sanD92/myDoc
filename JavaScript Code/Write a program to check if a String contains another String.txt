@@ -1,0 +1,38 @@
+
+**************************Using string.indexOf() ***********************************
+var programminglanguages = "C++, JavaScript, Ruby";
+var newlanguage = "Python";
+
+function findNewProgrammingLanguage(language) {
+    console.log(programminglanguages.indexOf(language));
+    if (programminglanguages.indexOf(language) >=0) {
+    console.log(language + "is present");
+    }
+    else {
+    console.log(language + "is absent");
+    
+    }
+}
+
+findNewProgrammingLanguage(newlanguage);
+findNewProgrammingLanguage(newlanguage);
+
+*****************************Using REGEXP.TEST() METHOD*******************************************************
+
+var programminglanguages = "C++, JavaScript, Ruby";
+var newlanguage = "Python";
+function findNewProgrammingLanguage(language) {
+		var programmingReg = new RegExp(language);
+
+		if (programmingReg.test(programminglanguages)) {
+					console.log(language + "is present");
+					}
+					else {
+					console.log(language + "is absent");
+					}
+}
+findNewProgrammingLanguage(newlanguage);
+
+*****************************Using STRING.CONTAINS() ECMAScript 6*******************************************************
+
+

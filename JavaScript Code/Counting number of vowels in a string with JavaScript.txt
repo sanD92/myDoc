@@ -1,0 +1,36 @@
+function getVowels(str) {
+  var vowelsCount = 0;
+
+  //turn the input into a string
+  var string = str.toString();
+  console.log(string)
+
+  //loop through the string
+  for (var i = 0; i <= string.length - 1; i++) {
+
+  //if a vowel, add to vowel count
+    if (string.charAt(i) == "a" || string.charAt(i) == "e" || string.charAt(i) == "i" || string.charAt(i) == "o" || string.charAt(i) == "u") {
+      vowelsCount += 1;
+    }
+  }
+  return vowelsCount;
+}
+console.log(getVowels("sandip bailkar"))
+
+Output: 5
+
+*****************************Using RegEx*******************
+function getVowels(str) {
+  var m = str.match(/[aeiou]/gi);
+  return m === null ? 0 : m.length;
+}
+console.log(getVowels("sandip bailkar"))
+
+*************************************Using Array.from and filter*******************
+const countVowels = str => Array.from(str)
+ .filter(letter => 'aeiou'.includes(letter)).length;
+console.log(countVowels('abcdefghijklmnopqrstuvwxyz')); 
+
+Output: 5
+
+****************************

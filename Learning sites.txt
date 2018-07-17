@@ -12,3 +12,8 @@ https://angular-university.io/course/getting-started-with-angular2
 https://github.com/p00j4/elemental-selenium-tips
 *********
 
+hidden feature:
+https://stackoverflow.com/questions/61088/hidden-features-of-javascript?page=1&tab=votes#tab-top
+**************************
+
+

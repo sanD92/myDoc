@@ -1,0 +1,23 @@
+var arr = [9, 9, 111, 2, 3, 4, 4, 5, 7];
+var sorted_arr = arr.slice().sort(); 
+var results = [];
+for (var i = 0; i < sorted_arr.length - 1; i++) {
+    if (sorted_arr[i + 1] == sorted_arr[i]) {
+        results.push(sorted_arr[i]);
+    }
+}
+
+//Using reduce function
+
+var input = [1, 2, 3, 1, 3, 1];
+var arr=[];
+//console.log("lenatgh is ",arr.length);
+
+var duplicates = input.reduce(function(acc, el, i, arr) {
+    console.log("arr length",arr.indexOf(el));
+    console.log("acc index ",acc.indexOf(el));
+    console.log("i",i) 
+  if (arr.indexOf(el) !== i && acc.indexOf(el) < 0) acc.push(el); return acc;
+},[]);
+
+console.log(duplicates); 
