@@ -1,0 +1,13 @@
+Should understand latest paradigms in Front End Development such as 
+ Pub-Sub Pattern,
+ Redux,
+ RxJS,
+ Service Workers,
+ Client Caching, 
+ Lazy Loading, 
+ Dynamic Injection, 
+ Bundle Optimization
+ rototype based inheritance, 
+ scopes,
+ variable and function hoisting, 
+ ES6 Standard, etc. 

@@ -16,4 +16,38 @@ hidden feature:
 https://stackoverflow.com/questions/61088/hidden-features-of-javascript?page=1&tab=votes#tab-top
 **************************
 
+***********JS************
+https://www.thatjsdude.com/interview/js2.html#trueLies
+http://2ality.com/2013/10/typeof-null.html
+http://blog.sourcing.io/interview-questions
+https://www.thatjsdude.com/jsConcepts/concepts/scope.html
+https://www.youtube.com/watch?v=7INtYcr8QIY
+https://bonsaiden.github.io/JavaScript-Garden/
+https://snook.ca/archives/javascript/javascript_pass
+https://www.sitepoint.com/implementing-memoization-in-javascript/
+https://stackoverflow.com/questions/7475336/how-does-jquery-chaining-work
+https://javascriptweblog.wordpress.com/2010/04/05/curry-cooking-up-tastier-functions/
+https://fr.umio.us/favoring-curry/
+http://krasimirtsonev.com/blog/article/7-lines-JavaScript-library-for-calling-asynchronous-functions
 
+
+
+
+
+
+
+function addBase(base){
+  return function(num){
+    return base + num;
+  }
+}
+var addTen = addBase(10);
+addTen(5); //15
+addTen(80); //90
+addTen(-5); //5
+  
+  
+   
+
+ 
+ 
