@@ -29,22 +29,18 @@ https://stackoverflow.com/questions/7475336/how-does-jquery-chaining-work
 https://javascriptweblog.wordpress.com/2010/04/05/curry-cooking-up-tastier-functions/
 https://fr.umio.us/favoring-curry/
 http://krasimirtsonev.com/blog/article/7-lines-JavaScript-library-for-calling-asynchronous-functions
+https://www.youtube.com/watch?v=yuo8YqKDQ-M
+http://jstherightway.org/#getting-started
+http://helephant.com/2008/08/19/functions-are-first-class-objects-in-javascript/
+http://www.adequatelygood.com/tag/javascript/
+https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide
+https://stackoverflow.com/tags/ecmascript-6/info
 
 
 
 
 
 
-
-function addBase(base){
-  return function(num){
-    return base + num;
-  }
-}
-var addTen = addBase(10);
-addTen(5); //15
-addTen(80); //90
-addTen(-5); //5
   
   
    
