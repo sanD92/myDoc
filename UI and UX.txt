@@ -1,4 +1,4 @@
-
+sandip
 The UI designer is responsible for designing screens which users will interact with. UX designer makes sure the interaction is a pleasurable one
 
 **************UX Design Learning Links:****************
