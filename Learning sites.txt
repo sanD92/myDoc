@@ -7,7 +7,8 @@ http://jstherightway.org/#getting-started
 
 **************Angular 2*************
 https://angular-university.io/course/getting-started-with-angular2
-
+https://angular-university.io/course/getting-started-with-angular2
+https://blog.angular-university.io/angular-2-tutorial-list/
 ************Selenium*************
 https://github.com/p00j4/elemental-selenium-tips
 *********
@@ -35,9 +36,24 @@ http://helephant.com/2008/08/19/functions-are-first-class-objects-in-javascript/
 http://www.adequatelygood.com/tag/javascript/
 https://developer.mozilla.org/en-US/docs/Web/JavaScript/Guide
 https://stackoverflow.com/tags/ecmascript-6/info
+https://medium.com/dev-bits/a-perfect-guide-for-cracking-a-javascript-interview-a-developers-perspective-23a5c0fa4d0d
+https://www.geeksforgeeks.org/javascript-tutorial/#form
 
 *******************Node.JS***************
 https://www.youtube.com/watch?v=pKd0Rpw7O48
+
+
+****************NLP Bots**************
+http://34.216.214.191:8081/
+uname:bailkarsandip68@gmail.com
+
+https://dev.liv.ai/nlp/#/dashboard/63/all
+
+
+
+
+
+
 
 
 
