@@ -1,0 +1,15 @@
+{
+  "name": "ninja-near-me",
+  "version": "1.0.0",
+  "description": "Find ninja near by",
+  "main": "server.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Sandip bailkar",
+  "license": "ISC",
+  "dependencies": {
+    "body-parser": "^1.18.3",
+    "express": "^4.16.3"
+  }
+}
