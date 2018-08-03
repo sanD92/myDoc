@@ -1,0 +1,290 @@
+String Methods:
+
+JavaScript Strings
+
+charAt()	    Returns the character at the specified index (position)
+charCodeAt()	Returns the Unicode of the character at the specified index
+concat()		Joins two or more strings, and returns a new joined strings
+endsWith()		Checks whether a string ends with specified string/characters
+fromCharCode()	Converts Unicode values to characters
+includes()		Checks whether a string contains the specified string/characters
+indexOf()		Returns the position of the first found occurrence of a specified value in a string
+lastIndexOf()	Returns the position of the last found occurrence of a specified value in a string
+localeCompare()	Compares two strings in the current locale
+match()			Searches a string for a match against a regular expression, and returns the matches
+repeat()		Returns a new string with a specified number of copies of an existing string
+replace()		Searches a string for a specified value, or a regular expression, and returns a new string where the specified values are replaced
+search()		Searches a string for a specified value, or regular expression, and returns the position of the match
+slice()			Extracts a part of a string and returns a new string
+split()			Splits a string into an array of substrings
+startsWith()	Checks whether a string begins with specified characters
+substr()		Extracts the characters from a string, beginning at a specified start position, and through the specified number of character
+substring()		Extracts the characters from a string, between two specified indices
+toLocaleLowerCase()		Converts a string to lowercase letters, according to the host's locale
+toLocaleUpperCase()		Converts a string to uppercase letters, according to the host's locale
+toLowerCase()			Converts a string to lowercase letters
+toString()				Returns the value of a String object
+toUpperCase()			Converts a string to uppercase letters
+trim()					Removes whitespace from both ends of a string
+valueOf()				Returns the primitive value of a String object
+
+String HTML Wrapper Methods
+anchor()	Creates an anchor
+big()		Displays a string using a big font
+blink()		Displays a blinking string
+bold()		Displays a string in bold
+fixed()		Displays a string using a fixed-pitch font
+fontcolor()	Displays a string using a specified color
+fontsize()	Displays a string using a specified size
+italics()	Displays a string in italic
+link()		Displays a string as a hyperlink
+small()		Displays a string using a small font
+strike()	Displays a string with a strikethrough
+sub()		Displays a string as subscript text
+sup()		Displays a string as superscript text
+
+
+JavaScript Number
+
+Number Properties
+Property			Description
+constructor			Returns the function that created JavaScript's Number prototype
+MAX_VALUE			Returns the largest number possible in JavaScript
+MIN_VALUE			Returns the smallest number possible in JavaScript
+NEGATIVE_INFINITY	Represents negative infinity (returned on overflow)
+NaN					Represents a "Not-a-Number" value
+POSITIVE_INFINITY	Represents infinity (returned on overflow)
+prototype			Allows you to add properties and methods to an object
+
+Number Methods
+
+isFinite()			Checks whether a value is a finite number
+isInteger()			Checks whether a value is an integer
+isNaN()				Checks whether a value is Number.NaN
+isSafeInteger()		Checks whether a value is a safe integer
+toExponential(x)	Converts a number into an exponential notation
+toFixed(x)			Formats a number with x numbers of digits after the decimal point
+toPrecision(x)		Formats a number to x length
+toString()			Converts a number to a string
+valueOf()			Returns the primitive value of a number
+
+Array method:
+
+push  	: add new element at last 
+pop	  	:remove last element
+shift 	:Remove first elemt of array
+unshift	:add new i.e. first element to array 
+
+splice()
+The splice() method can be used to add new items to an array: splice(position,remove_element,['a'],['b'],['c']);
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.splice(2, 0, "Lemon", "Kiwi");
+
+splice() to remove elements
+var fruits = ["Banana", "Orange", "Apple", "Mango"];
+fruits.splice(0, 1);        // Removes the first element of fruits
+
+slice()
+The slice() method creates a new array. It does not remove any elements from the source array.
+The method then selects elements from the start argument, and up to (but not including) the end argument.
+var fruits = ["Banana", "Orange", "Lemon", "Apple", "Mango"];
+var citrus = fruits.slice(1, 3);
+//Orange,Lemon
+
+Iterating Array:
+
+array.forEach(function(values,index,array){
+	//print values,index
+});
+
+arr.map(function(values,index,a){
+	console.log(values*2);
+});
+
+Array.filter()
+The filter() method creates a new array with array elements that passes a test.
+arr=[1,2,3,4,5,6];
+var a=arr.filter(function(values,index,a){
+	return values > 4;
+});
+console.log(a);
+
+The reduce() method runs a function on each array element to produce (reduce it to) a single value.
+arr=[1,2,3,4,5,6];
+
+var a=arr.reduce(function(total,values,index,a){
+	return total+ values;
+});
+console.log(a);
+
+Array.every()
+The every() method check if all array values pass a test.
+arr=[1,2,3,4,5,6];
+
+var a=arr.every(function(values,index,a){
+	return values>6;
+});
+console.log(a); //false
+
+Array.some()
+The some() method check if some array values pass a test.
+arr=[1,2,3,4,5,6];
+
+var a=arr.some(function(values,index,a){
+	return values>=6;
+});
+console.log(a); //true
+
+
+Array.indexOf()
+array.indexOf(item, start)
+array.lastIndexOf(item, start)
+
+Array.find()
+find() method returns the value of the first array element that passes a test function.
+
+arr=[1,2,3,4,5,6];
+
+var a=arr.find(function(values,index,a){
+	return values > 4;
+});
+console.log(a); //5
+
+
+Array.findIndex()
+The findIndex() method returns the index of the first array element that passes a test function
+arr=[1,2,3,4,5,6];
+var a=arr.findIndex(function(values,index,a){
+	return values > 4;
+});
+console.log(a);
+
+Array Methods
+
+concat()	
+Joins two or more arrays, and returns a copy of the joined arrays
+array1.concat(array2, array3, ..., arrayX)
+
+copyWithin()	 ECMAScript 6
+Copies array elements within the array, to and from specified positions
+array.copyWithin(target, start, end)
+
+entries()	ECMAScript 6
+Returns a key/value pair Array Iteration Object
+array.entries()
+ 
+every()	ECMAScript 5 
+Checks if every element in an array pass a test
+array.every(function(currentValue, index, arr), thisValue)
+
+fill() ECMAScript 6
+Fill the elements in an array with a static value
+array.fill(value, start, end)
+
+filter() ECMAScript 5	
+Creates a new array with every element in an array that pass a test
+array.filter(function(currentValue, index, arr), thisValue)
+
+find()	ECMAScript 6
+Returns the value of the first element in an array that pass a test
+array.find(function(currentValue, index, arr),thisValue)
+
+findIndex() ECMAScript 6
+Returns the index of the first element in an array that pass a test
+Returns the array element index if any of the elements in the array pass the test, otherwise it returns -1
+array.findIndex(function(currentValue, index, arr), thisValue)
+
+forEach()	ECMAScript 5
+Calls a function for each array element
+array.forEach(function(currentValue, index, arr), thisValue)
+
+from()		ECMAScript 6
+Creates an array from an object
+Array.from(object, mapFunction, thisValue)
+
+includes()	ECMAScript 7
+Check if an array contains the specified element and return true or false
+array.includes(element, start)
+
+indexOf() ECMAScript 5
+Search the array for an element and returns its position. Returns -1 if the item is not found.
+array.indexOf(item, start)
+
+isArray()	ECMAScript 5
+Checks whether an object is an array
+A Boolean. Returns true if the object is an array, otherwise it returns false
+Array.isArray(obj)
+
+join()	ECMAScript 1
+Joins all elements of an array into a string
+array.join(separator)
+
+keys()	 ECMAScript 6
+Returns a Array Iteration Object, containing the keys of the original array
+array.keys()
+
+lastIndexOf()	ECMAScript 5
+Search the array for an element, starting at the end, and returns its position
+Returns -1 if the item is not found.
+array.lastIndexOf(item, start)
+
+map()	 ECMAScript 5
+Creates a new array with the result of calling a function for each array element
+array.map(function(currentValue, index, arr), thisValue)
+
+pop()	ECMAScript 1
+Removes the last element of an array, and returns that element
+array.pop()
+
+push()	ECMAScript 1
+Adds new elements to the end of an array, and returns the new length
+array.push(item1, item2, ..., itemX)
+
+reduce()	ECMAScript 5
+Reduce the values of an array to a single value (going left-to-right)
+array.reduce(function(total, currentValue, currentIndex, arr), initialValue)
+
+reduceRight()	ECMAScript 5
+Reduce the values of an array to a single value (going right-to-left)
+array.reduceRight(function(total, currentValue, currentIndex, arr), initialValue)
+
+reverse()	ECMAScript 1
+Reverses the order of the elements in an array
+array.reverse()
+
+shift()	ECMAScript 1
+Removes the first element of an array, and returns that element
+array.shift()
+
+unshift()	ECMAScript 1
+Adds new elements to the beginning of an array, and returns the new length
+array.unshift(item1, item2, ..., itemX)
+
+slice()	ECMAScript 1
+Selects a part of an array, and returns the new array
+The slice() method selects the elements starting at the given start argument, and ends at, but does not include, the given end argument.
+array.slice(start, end)
+
+splice()	ECMAScript 1
+Adds/Removes elements from an array
+This method changes the original array
+array.splice(index, howmany, item1, ....., itemX)
+	index				Required. An integer that specifies at what position to add/remove items, Use negative values to specify the position from the end of the array
+	howmany				Optional. The number of items to be removed. If set to 0, no items will be removed
+	item1, ..., itemX	Optional. The new item(s) to be added to the array
+
+some()	ECMAScript 3
+Checks if any of the elements in an array pass a test
+array.some(function(currentValue, index, arr), thisValue)
+
+sort()	ECMAScript 1
+Sorts the elements of an array
+array.sort(compareFunction)
+compareFunction    function(a, b){return a-b}
+
+toString()	ECMAScript 1
+Converts an array to a string, and returns the result
+array.toString()
+
+valueOf()	ECMAScript 1
+Returns the primitive value of an array
