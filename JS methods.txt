@@ -288,3 +288,23 @@ array.toString()
 
 valueOf()	ECMAScript 1
 Returns the primitive value of an array
+
+
+JavaScript Date Output
+
+There are 4 ways to create a new date object:
+new Date()
+new Date(year, month, day, hours, minutes, seconds, milliseconds)
+new Date(milliseconds)
+new Date(date string)
+
+JavaScript counts months from 0 to 11. January is 0. December is 11.
+There are generally 3 types of JavaScript date input formats:
+
+Type	Example
+ISO Date	"2015-03-25" (The International Standard)
+Short Date	"03/25/2015"
+Long Date	"Mar 25 2015" or "25 Mar 2015"
+
+UTC (Universal Time Coordinated) is the same as GMT (Greenwich Mean Time).
+
