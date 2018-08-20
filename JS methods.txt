@@ -308,3 +308,9 @@ Long Date	"Mar 25 2015" or "25 Mar 2015"
 
 UTC (Universal Time Coordinated) is the same as GMT (Greenwich Mean Time).
 
+difference between session state and view state
+differnece between application cache and browser cache
+meanification
+flexbox
+
+
