@@ -1,0 +1,265 @@
+
+// OOP in JavaScript
+
+1. Create constructor 
+	- Constructor name should be like class name
+	- Call Constructor with new keyword if not it will return undefined as regualr function 
+	- you can handle this case using 'use strict' and throw the user defined error
+	- here this.color refer to window.color
+	
+	'use strict'
+	let Car =function(color){
+	if(!new.target) throw `Define object with new ${new.target}`
+	 this.color=color;
+	}
+
+	let redCar=  new Car('red');
+	console.log("red car object",redCar);
+
+let blueCar= new Car('Blue');
+console.log("Blue car object",blueCar);
+
+2. Prototype 
+  - Every constructor /object has property called Prototype
+  -
+		
+		-- Without Prototype - Object has its own property and method but with prototype the creator of method is __proto__.
+		
+		let Car =function(color){
+			
+		  //'this' refer to current Object	
+		  this.color =color;
+		  this.getColor = function(){
+		   return this.color;
+		  }
+		}
+
+		let redColor = new Car('red');
+
+		console.log("redColor object", redColor);
+		console.log("Get Color ", redColor.getColor());
+		
+		
+		 -- With Prototype
+		let Car =function(color){
+
+			  this.color =color;
+			  //Creator of getColor()  is __proto__  
+			  
+			  Car.prototype.getColor = function(){
+			   return this.color;
+			  }
+		}
+
+		let redColor = new Car('red');
+		console.log("redColor object", redColor);
+		console.log("Get Color ", redColor.getColor());
+		
+3. Object.create Method
+	- Object.create() makes the prototype inheritence possible in JavaScript
+	- Every Object in JavaScript is created from master Object
+	- console.dir(Object);
+	- Object.create(prototypeObject,propertyObject)
+	- extends constructor
+	
+		console.dir( Object); // Master Object .. All javascipt object is inherited from Master Object called 'Object'
+		let myObject= Object.create(Object.prototype);
+		let objLiteral={};
+		let noPrototype= Object.create(Object.prototype);
+		console.dir(myObject);
+		console.dir(objLiteral);
+		console.dir(noPrototype); // Prototype is null
+		
+		
+		
+		//
+			- Animal.prototype extend the constructor
+			- Object.create help to set another constructer parameter
+			- we can achive inheritance using prototype
+			- subconstructor inherits property from base constructor
+		
+		let Animal = function(leg){
+			this.leg =leg;
+		}
+
+		Animal.prototype={
+		 getLeg(){
+		 return this.leg;
+		 }
+		}
+
+		//let animal = new Animal(2);
+		let TowLegAnimal =function(){
+
+		}
+
+		TowLegAnimal= Object.create(Animal.prototype);
+
+		console.log(TowLegAnimal);
+		console.log(TowLegAnimal instanceof Animal); //true
+		
+		
+4. Prototype Chain
+	- We can achieve inheritence using Prototype Chain
+	
+			//Constructor
+			const Car =function(){}
+
+
+			// Extends Car constructor
+			Car.prototype ={
+			//ES2015 syntax
+			print(){
+			 return "I am car "
+			}
+			}
+
+			const ToyCar= function(){}
+
+			// ToyCar inherited from Car Constructor
+			ToyCar.prototype =Object.create(Car.prototype);
+
+			// Overwrite print method content
+			ToyCar.prototype.print=function(){
+				return "i am toy car"
+			}
+
+			const ToyTransformer= function(){}
+
+			ToyTransformer.prototype=Object.create(ToyCar.prototype);
+
+			ToyTransformer.prototype.print=function(){
+				return "i am Toy Transformer"
+			}
+
+			let toyota = new Car();
+			let legoCar=new ToyCar();
+			let optimusPrime= new ToyTransformer();
+
+
+			console.log(toyota.print());
+			console.log(legoCar.print());
+			console.log(optimusPrime.print());
+
+5. Extending Function Constructors:
+	-To call base constructor , we are using call() method	
+				
+			let Mammal =function(legs){
+			 this.legs=legs;
+			}
+
+			Mammal.prototype={
+				
+			  walk(){
+			   return "Walking";
+			  },
+			  sleep(){
+				return "Sleeping";
+			  }
+
+			}
+
+			let Bat =function(legs,isVegetarian){
+						//calling super contstructor leg
+				  Mammal.call(this,legs);
+				  this.isVegetarian=isVegetarian;
+			}
+
+			Bat.prototype = Object.create(Mammal.prototype);
+			
+			// resetting constructor 
+			Bat.prototype.constructor =Bat;
+
+			Bat.prototype.fly=function(){
+			 return "Flying";
+			}
+
+
+			let fruitBat= new Bat(4,true);
+			console.log(fruitBat.sleep()); //Sleeping
+			console.log(fruitBat.fly());  //Flying
+	
+	
+6.  Object literals / Object.setPrototypeOf() Method	
+	-Object.setPrototypeOf(dObject,sObject)
+	
+		//console.dir(Object);
+		// Implementing inheritance using  Object.setPrototypeOf()
+
+		let toyota = {
+			drive(){
+		   return 'I am driving toyota'
+		  }
+		}
+
+		let camry={
+		  drive(){
+			return `${super.drive()} camry`
+		  },
+			wifi(){
+		   return "Using wifi"
+		  }
+		}
+
+		Object.setPrototypeOf(camry,toyota);
+		
+		//camry.__proto__=toyota; // Not recommended for production
+		console.log(camry.drive()); //I am driving toyota camry
+
+7. Object.assign() Method
+	- copy property from one object to another
+	
+	-if name collision , override the method 
+	
+			let toyota={
+				drive(){
+				return 'driving toyota';
+				}
+			}
+
+			let camry={
+				wifi(){
+				return 'using wifi'
+				},
+			  // Name collision will overrid super objct method
+				drive(){
+				return 'driving camry '
+				} 
+			}
+
+			Object.assign(camry,toyota); //shallow copy
+
+			console.log(camry.drive()); //driving toyota
+
+			//another use of assign is in javscript constructor
+
+			let Car=function(x,y,z){
+				this.x=x;
+			  this.y=y;
+			  this.z=z;
+			}
+
+			console.log(new Car) //return Car Object with undefined value
+
+			let Car1=function(x,y,z){
+				Object.assign(this,{x,y,z})
+			}
+
+			console.log(new Car1) //return Car Object with undefined value
+
+
+
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+			
+
