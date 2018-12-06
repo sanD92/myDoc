@@ -1,0 +1,13 @@
+
+Clousers :
+
+	//Clousers inside loop
+	// with let it will print 1, 2, 3
+	// with var it will print 3 time 3 -Use IIFE to overcome
+
+		for(var i=0;i<3;i++){
+			
+		  setTimeout(()=>{
+			console.log(i);
+		  },1000);
+		}

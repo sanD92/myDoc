@@ -1,0 +1,100 @@
+var schoolInfo={
+ 	 "school" : [{
+    "class" : "12A",
+    "total" : "75",
+    "staff" : [{
+        "staffName" : "Stella", 
+        "age" : "31",
+        "staffDetails" : [{
+          "totalClassTaken" : "3",
+          "degree" : "Masters"
+        }]
+    }]
+  },
+  {
+    "class" : "12B",
+    "total" : "20",
+    "staff" : [{
+      "staffName" : "Morris", 
+      "total" : "20",
+      "staffDetails" : [{
+        "totalClassTaken" : "3",
+        "degree" : "Masters"
+      }]   
+  }]
+  }]
+}
+
+// create table;
+   
+   var table = document.createElement('table');
+   table.setAttribute("class", "border_class");
+   var tr = table.insertRow(-1);
+   
+   
+//Create Header row
+var headerRow =[];
+
+for(var key in schoolInfo.school){
+//console.log(schoolInfo.school[key]);
+	if(schoolInfo.school[key].hasOwnProperty('class') && schoolInfo.school[key].hasOwnProperty('total') ){
+  headerRow.push('class');
+  headerRow.push('total');
+  break;
+  }
+	
+}
+//console.log(headerRow);
+
+//Append Header row to to tr tage
+
+for(var i=0;i<headerRow.length;i++){
+	var th = document.createElement('th');
+	th.innerHTML=headerRow[i];
+  tr.appendChild(th);
+  
+}
+//console.log(table);
+
+// Now Add header tr and  json data  to table
+
+/*for(var i=0;i<schoolInfo.length;i++){
+
+		tr = table.insertRow(-1);
+		for(var j=0;j<headerRow.length;j++){
+    	var tableCell = tr.insertCell(-1);
+      tableCell.innerHTML = personalInfo[i][headerRow[j]];
+    }
+
+}*/
+
+for(var key in schoolInfo.school){
+			console.log(schoolInfo.school[key].class);
+			
+      
+      var tableCell = tr.insertCell(-1);
+      tr.style='  border: 1px solid #dddddd;text-align:left;padding: 15px;'
+  		 tr = table.insertRow(-1);
+      for(var j=0;j<headerRow.length;j++){
+      
+    	var tableCell = tr.insertCell(-1);
+     
+      //tableCell.style=' border: solid 1px black;align:left'
+      tableCell.style='  border: 1px solid #dddddd;text-align:left;padding: 15px;'
+      tableCell.innerHTML = schoolInfo.school[key][headerRow[j]];
+    }
+}
+
+console.log(table);
+
+var show =document.getElementById('show');
+
+show.innerHTML="";
+show.appendChild(table);
+
+
+
+
+
+
+
