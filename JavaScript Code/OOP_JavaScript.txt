@@ -250,13 +250,84 @@ console.log("Blue car object",blueCar);
 
 
 			
+8. Function Mixins in JavaScript
+	
+	- We can create object using 2 way
+		- Using Constructor 
+					let Car= function(color){
+					this.color=color;
+					}
+					let redCar=new Car('red');
+					console.dir(redCar);
+		- Factory Methods
+					let Car= function(color){
+						return Object.assign({},{color:color});
+					}
+					let blueCar= Car('Blue');
+					console.dir(blueCar);
+	
+	
+	//Exapmle JavaScript Engineer mixins
+	
+			let jsSkill={	
+			  jsKnow(){		  
+			  return true;
+			  }
+			}
+
+			let degree= {
+			enggDegree(){
+			 return true
+			}
+			}
+
+			let backend={
+				bakckEndSkills(){
+			   return true;
+			  }
+			}
+			// Function mixins
+			let jsScriptEngineer = Object.assign({},jsSkill,degree);
+			console.dir(jsScriptEngineer);
+			let fullStackEngineer = Object.assign({},jsSkill,degree ,backend);
+			console.dir(fullStackEngineer);
+
+	
+			// Factory function with closure  - Create Object
+			let Car= function(color){
+				let moving= false;
+			  return Object.assign({},{
+			  color:color,
+			  drive(){
+			  moving=true;
+			  return this;
+			  },
+			  isMoving(){
+			  return moving;
+			  }
+			  
+			  });
+			}
+			let blueCar= Car('Blue');
+			console.log(blueCar.drive().isMoving()); //true
 			
 			
+10. Javascript Classes ES2015
+	- function constructor with prototype method
+	- typeof class is return function ..which means class are functions in js
+	- 
 			
 			
-			
-			
-			
+			class Car{
+				constructor(color){
+					this.color=color;
+				}
+				drive(){
+				return 'driving car'
+				}
+			}
+			let redCar = new Car('red');
+			console.log(redCar.drive())
 			
 			
 			

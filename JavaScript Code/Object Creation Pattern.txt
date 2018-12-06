@@ -1,0 +1,84 @@
+
+#JavaScript object creation patterns tutorial - 
+	1. Factory 
+	2. Constructor pattern 
+	3. Prototype pattern
+	4. Dynamic prototype pattern
+
+		**************************************factory pattern********************************************* 
+		
+				let peopleFactory=function(name, age,state){
+					let temp={};  
+				  temp.name=name;
+				  temp.age=age;
+				  temp.state= state;
+			
+				  temp.print=function(){
+						return this.name +','+this.age+','+this.state
+				  }
+				  return temp
+				}
+
+				let people1= peopleFactory('sandip',27,true);
+				console.log(people1.print());
+		
+		
+		**************************************Constructor pattern********************************************* 
+		-Problem with constructor pattern is it will create seperate property for every object 
+		
+				let peopleFactory=function(name, age,state){
+				  
+				  this.name=name;
+				  this.age=age;
+				  this.state= state;
+				  
+				  this.print=function(){
+						return this.name +','+this.age+','+this.state
+				  }
+				}
+
+				let people1= peopleFactory('sandip',27,true);
+				let people2= peopleFactory('amar',32,true);
+				console.log(people1.print());
+		
+
+		**************************************Prototype pattern********************************************* 
+
+				let peopleProto =function(){
+
+				};
+				peopleProto.prototype.name ='no name';
+				peopleProto.prototype.age ='null';
+				peopleProto.prototype.city ='null';
+
+				peopleProto.prototype.printPeople=function(){
+				 return this.name + ',' + this.age +','+this.city;
+				}
+
+
+				let personObject = new peopleProto();
+				personObject.name='sandip';
+				personObject.age='27';
+				personObject.city='pune';
+
+				console.log(personObject.printPeople());
+		
+		
+		**************************************Dymanic prototype pattern********************************************* 
+
+				let peopleDynamicProto =function(name,age,city){
+
+					this.name=name;
+				  this.age=age;
+				  this.city=city;
+				  if(typeof peopleDynamicProto.prototype.printPeople !=='function'){
+					
+					peopleDynamicProto.prototype.printPeople =function(){
+					return this.name +','+this.age+','+this.city;
+					}
+				  }
+
+				};
+				let personObject = new peopleDynamicProto('sandip',27,'pune');
+
+				console.log(personObject.printPeople());
