@@ -1,0 +1,387 @@
+
+CSS selectors are used to "find" (or select) HTML elements based on their element name, id, class, attribute, and more.
+	1. id     - #idValue {}
+	2. class  - .className {}
+	3. tag    - any tag like a{}
+	
+	
+What style will be used when there is more than one style specified for an HTML element?
+- html element with more than one style 
+	consider the body tag with inline style and external style ?
+	so the inline style will override the external style.
+	because inline style has the highest priority
+	
+
+--Three Ways to Insert CSS--
+	1. External style sheet
+	2. Internal style sheet
+	3. Inline style	
+	
+Priority of style
+	1. Inline style (inside an HTML element)
+	2. External and internal style sheets (in the head section)
+	3. Browser default
+	
+#CSS Background Properties
+		1. background-color
+		2. background-image
+		3. background-repeat		
+		4. background-attachment
+		5. background-position
+		
+			body {
+			  background-image: url("gradient_bg.png");
+			  background-repeat: repeat-x;
+			}
+			
+			body {
+			  background-image: url("img_tree.png");
+			  background-repeat: no-repeat;
+			  background-position: right top;
+			}
+			body {
+			  background-image: url("img_tree.png");
+			  background-repeat: no-repeat;
+			  background-position: right top;
+			  background-attachment: fixed;
+			}
+			
+			Background - Shorthand property
+			body {
+			  background: #ffffff url("img_tree.png") no-repeat right top;
+			}
+			
+#CSS border properties 
+The CSS border properties allow you to specify the style, width, and color of an element's border.		
+		1 . border-style
+				p.dotted {border-style: dotted;}
+				p.dashed {border-style: dashed;}
+				p.solid {border-style: solid;}
+				p.double {border-style: double;}
+				p.groove {border-style: groove;}
+				p.ridge {border-style: ridge;}
+				p.inset {border-style: inset;}
+				p.outset {border-style: outset;}
+				p.none {border-style: none;}
+				p.hidden {border-style: hidden;}
+				p.mix {border-style: dotted dashed solid double;}
+				
+		2. border-width - thin, medium, or thick.
+				p.one {
+				  border-style: solid;
+				  border-width: 5px;
+				}
+		3. border-color
+				- The border-color property can have from one to four values (for the top border, right border, bottom border, and the left border).
+				
+				p.one {
+				  border-style: solid;
+				  border-color: red;
+				}
+				p {
+				  border: 5px solid red; // border-width border-style (required) border-color
+				}
+				
+#CSS Margins			
+			- The CSS margin properties are used to create space around elements, outside of any defined borders.
+				p {
+				  margin-top: 100px;
+				  margin-bottom: 100px;
+				  margin-right: 150px;
+				  margin-left: 80px;
+				}
+				p {
+					margin: 25px 50px 75px 100px;
+				}
+			- auto ,inheirt
+				p.ex1 {
+				  margin: auto;
+				  margin-left: inherit;
+				}
+#CSS Padding
+			- The CSS padding properties are used to generate space around an element's content, inside of any defined borders.
+				div {
+				  padding-top: 50px;
+				  padding-right: 30px;
+				  padding-bottom: 50px;
+				  padding-left: 80px;
+				}
+				div {
+				  padding: 25px 50px 75px 100px;
+				}
+				
+#CSS Height and Width
+			height		- Sets the height of an element
+			max-height	- Sets the maximum height of an element
+			max-width	- Sets the maximum width of an element
+			min-height	- Sets the minimum height of an element
+			min-width	- Sets the minimum width of an element
+			width		- Sets the width of an element
+			
+# The CSS Box Model
+			1. Content - The content of the box, where text and images appear
+			2. Padding - Clears an area around the content. The padding is transparent
+			3. Border - A border that goes around the padding and content
+			4. Margin - Clears an area outside the border. The margin is transparent
+			
+# CSS Outline
+			1. outline-style
+			2. outline-color
+			3. outline-width
+			4. outline-offset
+			5. outline
+			
+			p.ex4 {
+			  border: 1px solid black;
+			  outline-style: solid;
+			  outline-color: red;
+			  outline-width: 4px;
+			}
+			Outline - Shorthand property outline-
+			p.ex2 {outline: dotted red;}
+			p.ex3 {outline: 5px solid yellow;} //width outline-style (required) outline-color
+			p.ex4 {outline: thick ridge pink;}
+			
+			//The outline-offset property adds space between an outline and the edge/border of an element. 
+			The space between an element and its outline is transparent.
+			p {
+			  margin: 30px;
+			  border: 1px solid black;
+			  outline: 1px solid red;
+			  outline-offset: 15px;
+			}
+#All CSS Text Properties
+			color				Sets the color of text
+			direction			Specifies the text direction/writing direction
+			letter-spacing		Increases or decreases the space between characters in a text
+			line-height			Sets the line height
+			text-align			Specifies the horizontal alignment of text
+			text-decoration		Specifies the decoration added to text
+			text-indent			Specifies the indentation of the first line in a text-block
+			text-shadow			Specifies the shadow effect added to text
+			text-transform		Controls the capitalization of text
+			text-overflow		Specifies how overflowed content that is not displayed should be signaled to the user
+			unicode-bidi		Used together with the direction property to set or return whether the text should be overridden to support multiple languages in the same document
+			vertical-align		Sets the vertical alignment of an element
+			white-space			Specifies how white-space inside an element is handled
+			word-spacing		Increases or decreases the space between words in a text
+			
+#CSS Fonts
+		
+		-font-family:
+			- Generic family
+				1. Serif  -Times New Roman ,Georgia
+				2. Sans-serif - Arial ,Verdana
+				3. Monospace - Courier New Lucida Console
+			- font family 
+			
+			p {
+			  font-family: "Times New Roman", Times, serif;
+			}
+			
+		-font-style
+				normal - The text is shown normally
+				italic - The text is shown in italics
+				oblique - The text is "leaning" (oblique is very similar to italic, but less supported)
+				
+				p {
+				  font-style: normal;
+				}
+				
+		-font-size
+				-If you do not specify a font size, the default size for normal text, like paragraphs, is 16px (16px=1em).
+				p {
+				  font-size: 0.875em;
+				}
+				//Responsive Font Size ..vw- viewport width
+				<h1 style="font-size:10vw;">Responsive Text</h1>
+				
+		-font-weight
+				p {
+				  font-weight: normal;
+				}
+
+				p {
+				  font-weight: lighter;
+				}
+
+				p {
+				  font-weight: bold;
+				}
+				p {
+				  font-weight: 900;
+				  
+		- font-variant
+				p.normal {
+				  font-variant: normal;
+				}
+
+				p.small {
+				  font-variant: small-caps;
+				}
+#CSS Icons
+		- Font Awesome Icons  - <i class="fa fa-cloud"></i>
+		- Bootstrap Icons     - <i class="glyphicon glyphicon-cloud"></i>
+		- Google Icons        - <i class="material-icons">cloud</i>
+		
+#CSS Links		
+		-	The four links states are:
+			a:link 		- a normal, unvisited link
+			a:visited 	- a link the user has visited
+			a:hover 	- a link when the user mouses over it
+			a:active 	- a link the moment it is clicked
+			
+		- text-decoration
+			-The text-decoration property is mostly used to remove underlines from links:
+				a:visited {
+				  text-decoration: none;
+				}
+				a:hover {
+				  text-decoration: underline;
+				}
+#CSS Lists
+		- <ol>
+		- <ul>
+		
+		1. list-style-type
+				The list-style-type property specifies the type of list item marker
+				ul {
+				  list-style-type: circle; //square ,upper-roman ,lower-alpha
+				}
+		2. list-style-image
+				The list-style-image property specifies an image as the list item marker:
+				ul {
+				  list-style-image: url('sqpurple.gif');
+				}
+		3. list-style-position
+				ul{
+				  list-style-position: outside;
+				}
+				ul {
+				  list-style-position: inside;
+				}
+				
+				//shorthand property - list-style-type , list-style-position ,list-style-image
+				ul {
+				  list-style: square inside url("sqpurple.gif");
+				}
+#CSS Tables
+			table, th, td {
+			  border: 1px solid black;
+			}
+			
+			border-collapse
+				-The border-collapse property sets whether the table borders should be collapsed into a single border:
+				table {
+				  border-collapse: collapse;
+				}
+
+				table, th, td {
+				  border: 1px solid black;
+				}
+				
+			Responsive Table
+				<div style="overflow-x:auto;">
+				
+#CSS Layout - The display Property
+			- The display property is the most important CSS property for controlling layout.
+			- The default display value for most elements is block or inline.
+
+			//hide element
+			h1 {
+			  display: none; //Element not take the space
+			}
+			h1{
+			  visibility: hidden; //Element take the space
+			}
+			
+#CSS Layout - The position Property
+			- The position property specifies the type of positioning method used for an element (static, relative, fixed, absolute or sticky).
+			
+#CSS Overflow
+			- The overflow property specifies whether to clip content or to add scrollbars when the content of an element is too big to fit in a specified area.
+			- The overflow property has the following values:
+
+				visible - Default. The overflow is not clipped. It renders outside the element's box
+				hidden - The overflow is clipped, and the rest of the content will be invisible
+				scroll - The overflow is clipped, but a scrollbar is added to see the rest of the content
+				auto - If overflow is clipped, a scrollbar should be added to see the rest of the content
+				
+		overflow-x specifies what to do with the left/right edges of the content.
+		overflow-y specifies what to do with the top/bottom edges of the content.
+		
+#float property
+			- The float property is used for positioning and formatting content 
+			
+			The float property can have one of the following values:
+				left - The element floats to the left of its container
+				right- The element floats to the right of its container
+				none - The element does not float (will be displayed just where it occurs in the text). This is default
+				inherit - The element inherits the float value of its parent
+				
+#CSS Combinators 
+			- A combinator is something that explains the relationship between the selectors.
+			
+			four different combinators in CSS:
+				descendant selector (space)
+				child selector (>)
+				adjacent sibling selector (+)
+				general sibling selector (~)
+#CSS Pseudo-classes
+			- A pseudo-class is used to define a special state of an element.
+			
+			All CSS Pseudo Classes
+			
+			:active			a:active		Selects the active link
+			:checked		input:checked	Selects every checked <input> element
+			:disabled		input:disabled	Selects every disabled <input> element
+			:empty			p:empty	Selects every <p> element that has no children
+			:enabled		input:enabled	Selects every enabled <input> element
+			:first-child	p:first-child	Selects every <p> elements that is the first child of its parent
+			:first-of-type	p:first-of-type	Selects every <p> element that is the first <p> element of its parent
+			:focus			input:focus	Selects the <input> element that has focus
+			:hover			a:hover	Selects links on mouse over
+			:in-range		input:in-range	Selects <input> elements with a value within a specified range
+			:invalid		input:invalid	Selects all <input> elements with an invalid value
+			:lang(language)	p:lang(it)	Selects every <p> element with a lang attribute value starting with "it"
+			:last-child		p:last-child	Selects every <p> elements that is the last child of its parent
+			:last-of-type	p:last-of-type	Selects every <p> element that is the last <p> element of its parent
+			:link			a:link	Selects all unvisited links
+			:not(selector)	:not(p)	Selects every element that is not a <p> element
+			:nth-child(n)	p:nth-child(2)	Selects every <p> element that is the second child of its parent
+			
+			:nth-last-child(n)		p:nth-last-child(2)	Selects every <p> element that is the second child of its parent, counting from the last child
+			:nth-last-of-type(n)	p:nth-last-of-type(2)	Selects every <p> element that is the second <p> element of its parent, counting from the last child
+			:nth-of-type(n)			p:nth-of-type(2)	Selects every <p> element that is the second <p> element of its parent
+			:only-of-type			p:only-of-type	Selects every <p> element that is the only <p> element of its parent
+			:only-child				p:only-child	Selects every <p> element that is the only child of its parent
+			:optional				input:optional	Selects <input> elements with no "required" attribute
+			:out-of-range			input:out-of-range	Selects <input> elements with a value outside a specified range
+			:read-only				input:read-only	Selects <input> elements with a "readonly" attribute specified
+			:read-write				input:read-write	Selects <input> elements with no "readonly" attribute
+			:required				input:required	Selects <input> elements with a "required" attribute specified
+			:root					root	Selects the document's root element
+			:target					#news:target	Selects the current active #news element (clicked on a URL containing that anchor name)
+			:valid					input:valid	Selects all <input> elements with a valid value
+			:visited				a:visited	Selects all visited links
+			
+			All CSS Pseudo Elements
+
+			::after 		p::after		Insert content after every <p> element
+			::before		p::before		Insert content before every <p> element
+			::first-letter	p::first-letter	Selects the first letter of every <p> element
+			::first-line	p::first-line	Selects the first line of every <p> element
+			::selection		p::selection	Selects the portion of an element that is selected by a user
+			
+			
+#CSS Opacity / Transparency
+			- The opacity property specifies the opacity/transparency of an element.
+			- he opacity property can take a value from 0.0 - 1.0. 
+			
+#CSS Navigation Bar = List of Links
+		- Vertical Navigation Bar
+		- Horizontal Navigation Bar
+		
+#CSS Dropdowns
+#Image Sprites
+		-An image sprite is a collection of images put into a single image.
