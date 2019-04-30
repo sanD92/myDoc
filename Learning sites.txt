@@ -50,6 +50,15 @@ uname:bailkarsandip68@gmail.com
 https://dev.liv.ai/nlp/#/dashboard/63/all
 
 
+****************ML**************
+https://developers.google.com/machine-learning/crash-course/
+https://developers.google.com/machine-learning/crash-course/ml-intro
+https://analytics.google.com/analytics/academy/
+
+--cloud
+https://cloud.google.com/certification/data-engineer
+
+
 
 
 
